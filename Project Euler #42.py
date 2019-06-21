@@ -5,17 +5,17 @@ words = ["A","ABILITY","ABLE","ABOUT","ABOVE","ABSENCE","ABSOLUTELY","ACADEMIC",
 
 start = time.time()
 
-def Coded_triangle_numbers(word, value):
+def Coded_triangle_numbers(word,value):
     for x in word:
-        value += int(ord(x) - 64)
-    inverse = ((math.sqrt(8 * value + 1) - 1) / 2)
+        value += ord(x)-64
+    inverse = ((math.sqrt(8*value+1)-1)/2)
     if inverse == int(inverse):
         triangles.append(inverse)
     return None
 
 def caller():
     for word in words:
-        Coded_triangle_numbers(word, 0)
+        Coded_triangle_numbers(word,0)
     return None
 
 caller()
